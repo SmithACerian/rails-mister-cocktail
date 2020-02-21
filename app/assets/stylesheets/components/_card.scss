@@ -1,0 +1,27 @@
+.cocktail-card-holder {
+  &:hover {
+    color: #fff;
+    text-decoration: none
+  }
+}
+
+.cocktail-card {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('picture2.jpg');
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+  padding: 20px;
+  h3 {
+    color: #fff;
+    font-size: 22px;
+  }
+  ul {
+
+  }
+  li {
+    color: #fff;
+    font-size: 14px;
+  }
+}

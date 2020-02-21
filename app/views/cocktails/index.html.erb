@@ -1,9 +1,26 @@
-<h1>Your Cocktails</h1>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<div class="banner">
+  <h1>Tonight's Menu</h1>
+</div>
 
-<%= link_to 'New Cocktail', new_cocktail_path %>
+
+<div class="grid">
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail), class: 'cocktail-card-holder' do %>
+      <div class="cocktail-card">
+        <h3><%= cocktail.name %></h3>
+        <ul>
+          <% cocktail.doses.each do |dose| %>
+            <li><%= dose.ingredient.name %></li>
+          <% end %>
+        </ul>
+      </div>
+
+    <% end %>
+  <% end %>
+  <div class="cocktail-card button-card">
+          <button class="pure-button" > <%= link_to "Create a cocktail", new_cocktail_path %></button>
+      </div>
+</div>
+
+
 
